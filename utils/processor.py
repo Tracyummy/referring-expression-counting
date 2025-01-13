@@ -5,6 +5,43 @@ import random
 DATA_ROOT = '/mnt/workstation/images' # update this to the path that contains 'rec-8k' folder
 
 class DataProcessor(): 
+    """
+    A class used to process data for referring expression counting.
+    Attributes
+    ----------
+    image_path : str
+        The path to the directory containing images.
+    anno_file : str
+        The path to the annotations file.
+    annotations : dict
+        A dictionary containing annotations loaded from the annotations file.
+    split_file : str
+        The path to the splits file.
+    splits : dict
+        A dictionary containing data splits loaded from the splits file.
+    Methods
+    -------
+    read_annotations():
+        Reads and returns annotations from the annotations file.
+    read_splits():
+        Reads and returns data splits from the splits file.
+    get_image_path():
+        Returns the path to the directory containing images.
+    get_anno_for_tuple(image_id, caption):
+        Returns the annotation for a given image ID and caption.
+    get_class_name(image_id, caption):
+        Returns the class name for a given image ID and caption.
+    get_attr_name(image_id, caption):
+        Returns the attribute name for a given image ID and caption.
+    get_type_name(image_id, caption):
+        Returns the type name for a given image ID and caption.
+    get_split_type(image_id, caption):
+        Returns the split type for a given image ID and caption.
+    get_prompt_for_image(image_id_caption):
+        Returns the caption for a given image ID and caption tuple.
+    get_img_ids_for_split(split):
+        Returns a list of tuples (image_id, caption) for a given split.
+    """
     def __init__(self):
         self.image_path = os.path.join(DATA_ROOT, 'rec-8k')
 
