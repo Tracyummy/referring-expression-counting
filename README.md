@@ -1,5 +1,11 @@
 # Referring Expression Counting
 
+输入输出
+```python
+dataset[0]输出如下
+img:(3,h,w), ['person standing.', 'person walking.'], (720, 1280), [('1163-cs-0f1228d2dd179f889ca738810a8be090.jpg', 'person standing'), ('1163-cs-0f1228d2dd179f889ca738810a8be090.jpg', 'person walking')])
+```
+
 Official implementation of CVPR 2024 paper 'Referring Expression Counting'.
 
 ![alt text](asset/rec_task.drawio.png)
